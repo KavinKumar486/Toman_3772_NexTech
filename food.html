@@ -1,0 +1,216 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAIDO</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-family: 'consolas';
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    header {
+      color: black;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header img {
+      max-width: 90px;
+      position: absolute;
+      top: 47%;
+      left: 5%;
+      transform: translateY(-50%);
+    }
+
+    section {
+
+      justify-content: space-between;
+      padding: 2rem;
+    }
+
+    .left-column, .right-column {
+      flex: 1;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .left-column {
+      background-color: #8cd3ff; /* Light Blue */
+    }
+
+    .right-column {
+      background-color: #ffd384; /* Light Yellow */
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .food-item {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 20px;
+    }
+
+    .food-item img {
+      max-width: 100px;
+      border-radius: 5px;
+    }
+
+    .food-item h2 {
+      margin-top: 0;
+      color: white;
+      font-family: 'consolas'; /* Use a monospace font */
+      color: #343a40; /* Dark gray text */
+    }
+
+    .food-item p {
+      color: #6c757d; /* Light gray text */
+    }
+
+    footer {
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+    }
+
+    footer a img {
+      max-width: 30px;
+      max-height: 30px;
+      vertical-align: middle;
+    }
+
+    .login-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 1rem 3.5rem;
+      background-color: #fff;
+      color: #333;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="gaido.png" alt="Gaido Logo">
+  <h1 style="font-weight: bold; font-family: 'consolas'; font-size: 40px;position: absolute; top: 25%; left: 11%; transform: translateY(-50%);">South Indian Cuisines</h1>
+</header>
+<h style="font-weight:bold; position: absolute; top: 15%;left: 12%;font-size: 120%;">Currently Available</h>
+<div class="container">
+
+  <div class="food-item">
+    <img src="dosa.jpg" alt="Dosa">
+    <div>
+      <h2>Dosa</h2>
+      <p>A crispy, savory pancake made from rice and lentil batter, served with chutney and sambar.</p>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img src="idli.jpg" alt="Idli">
+    <div>
+      <h2>Idli</h2>
+      <p>Steamed rice cakes, served with chutney and sambar.</p>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img src="vada.jpg" alt="Vada">
+    <div>
+      <h2>Vada</h2>
+      <p>Deep-fried lentil fritters, served with chutney and sambar.</p>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img src="uttapam.jpg" alt="Uttapam">
+    <div>
+      <h2>Uttapam</h2>
+      <p>A thick pancake made from rice and lentil batter, topped with vegetables.</p>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img src="pongal.jpg" alt="Pongal">
+    <div>
+      <h2>Pongal</h2>
+      <p>A savory rice and lentil dish, flavored with spices and topped with ghee.</p>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img src="biryani.jpg" alt="Biryani">
+    <div>
+      <h2>Biryani</h2>
+      <p>A flavorful rice dish cooked with spices, herbs, and meat or vegetables.</p>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img src="upma.jpg" alt="Upma">
+    <div>
+      <h2>Upma</h2>
+      <p>A savory porridge made from semolina, often mixed with vegetables and spices.</p>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img src="puri.jpg" alt="Puri">
+    <div>
+      <h2>Puri</h2>
+      <p>Deep-fried bread made from wheat flour, served with potato curry.</p>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img src="rasam.jpg" alt="Rasam">
+    <div>
+      <h2>Rasam</h2>
+      <p>A tangy soup made from tamarind, tomatoes, and spices, often served as a side dish.</p>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img src="bonda.jpg" alt="Bonda">
+    <div>
+      <h2>Bonda</h2>
+      <p>Deep-fried snack made from gram flour batter, often stuffed with spicy potato filling.</p>
+    </div>
+  </div>
+
+</div>
+
+
+</body>
+</html>
+

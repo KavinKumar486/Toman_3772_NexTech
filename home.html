@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden; /* to prevent scrolling when the button is clicked */
+      font-family: 'consolas';
+    }
+
+    #sidePanel {
+      position: fixed;
+      right: -40%; /* initially hidden */
+      top: 0;
+      height: 100vh;
+      width: 30%;
+      background-color: #f0f0f0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transition: right 0.3s ease;
+      padding: 20px;
+    }
+
+    #toggleButton {
+      position: relative;
+      border-radius: 80%;
+      background-color: #3498db;
+      color: #fff;
+      margin-left: 89%;
+      margin-top: 45%;
+      padding: 12px 15px 12px 15px; 
+    }
+
+    #logo {
+        height: 45px;
+        width: 42px;
+        display:inline-block;
+        position: absolute;
+        margin-top: -28px;
+    }
+
+    #logo_title {
+        display:inline-block;
+        position: fixed;
+        margin-left: 32px;
+        margin-bottom: 12px;
+        font-size: 24px;
+        margin-top: -25px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    #middleOptions {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background-color:aliceblue;
+        height: 100px;
+        width: 500px;
+        padding-top: 0.5%;
+        border-radius: 25%;
+    }
+
+    #middleOptions button {
+        margin: 10px;
+        padding: 15px;
+        font-size: 18px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #news {
+        position: fixed;
+        bottom: 10px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    #news marquee {
+        font-size: 16px;
+        color: #333;
+    } 
+    #to{
+        height:50px;
+        width: 150px;
+        margin-left: 30%;
+    }
+  </style>
+</head>     
+<body>
+    <div id="to">
+        
+    </div>
+    <div id="top">
+        <img id="logo" src="C:\Users\Kavin Kumar\Desktop\kriyaa\logo.jpg">
+        <h2 id="logo_title">Gaido</h2>
+    </div>
+
+    <div id="middleOptions">
+        <button onclick="navigateTo('Home')">Home</button>
+        <button onclick="navigateTo('library')">Library</button>
+        
+        <button onclick="navigateTo('Events')">Events</button>
+        <button onclick="navigateTo('News')">News</button>
+    </div>
+
+    <button id="toggleButton" onclick="toggleSidePanel()">Menu</button>
+
+    <div id="sidePanel">
+        <a>Ask your Doubts</a>
+        <p>map</p>
+        <p>Profile</p>
+        <p>Settings</p>
+        <p>LogOut</p>
+    </div>
+
+    <div id="news">
+        <marquee behavior="scroll" direction="left">
+            The Department of Computing (Data Science) is organizing a Two days offline workshop on "Principles of Quantum Machine Learning(QML)" during March 7th and 8th 2024 at CIT. Those who are interested in QML can apply for the workshop and gain the knowledge.
+Kindly circulate the brochure and encourage your friends / research scholars to attend the workshop
+        </marquee>
+    </div>
+
+    <script>
+        function toggleSidePanel() {
+            const sidePanel = document.getElementById('sidePanel');
+            const toggleButton = document.getElementById('toggleButton');
+
+            if (sidePanel.style.right === '-40%') {
+                sidePanel.style.right = '0';
+                toggleButton.style.right = '30%';
+            } else {
+                sidePanel.style.right = '-40%';
+                toggleButton.style.right = '0';
+            }
+        }
+
+        function navigateTo(option) {
+            
+           if(option == 'Events'){
+            window.location.href="events.html";
+           }
+        }
+    </script>
+</body>
+</html>
